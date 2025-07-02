@@ -1,0 +1,131 @@
+section {
+  width: 262px;
+  min-height: 382px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 16px;
+  border-top: 24px solid;
+}
+
+.romance {
+  border-color: var(--romance-border);
+}
+
+.misterio {
+  border-color: var(--misterio-border);
+}
+
+.fantasia {
+  border-color: var(--fantasia-border);
+}
+
+.ficcao-cientifica {
+  border-color: var(--ficcao-cientifica-border);
+}
+
+.tecnicos {
+  border-color: var(--tecnicos-border);
+}
+
+section .info-livro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+section .info-livro > * {
+  margin: 8px;
+}
+
+.texto-h2 {
+  font-family: var(--font-montserrat);
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  line-height: 26px;
+  text-align: center;
+  max-width: 90%;
+}
+
+.texto-h3 {
+  font-family: var(--font-montserrat);
+  font-size: 16px;
+  font-weight: var(--font-weight-normal);
+  line-height: 20px;
+  text-align: center;
+  color: var(--color-secundaria);
+}
+
+section .imagem {
+  margin-top: 32px;
+}
+
+section img {
+  width: 128px;
+  height: 184px;
+  margin-bottom: 20px;
+}
+
+.favorito-btn {
+  position: absolute;
+  top: 32px;
+  right: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: #ff5252;
+  padding: 0;
+  outline: none;
+}
+
+.favorito-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Base PrimeNG component overrides */
+:host ::ng-deep .p-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+:host ::ng-deep .p-card .p-card-body {
+  padding: 1rem;
+}
+
+:host ::ng-deep .p-card .p-card-content {
+  padding: 0;
+}
+
+:host ::ng-deep .p-button-text:focus {
+  box-shadow: none !important;
+}
+
+:host ::ng-deep .p-card .p-card-header {
+  padding-bottom: 0;
+}
+
+/* Dark mode specific styles - preserving genre colors */
+:host-context(.dark-theme) ::ng-deep .p-card {
+  background-color: rgba(30, 30, 30, 0.85); /* Semi-transparent to slightly show genre color */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Enhanced border visibility */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.07); /* Subtle light shadow */
+}
+
+:host-context(.dark-theme) ::ng-deep .p-card:hover {
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.12); /* Enhanced shadow on hover */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* Brighter border on hover */
+}
+
+:host-context(.dark-theme) ::ng-deep .autor-text {
+  color: rgba(255, 255, 255, 0.87) !important;
+}

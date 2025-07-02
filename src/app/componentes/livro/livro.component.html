@@ -1,0 +1,31 @@
+<div class="relative">
+  <p-card [styleClass]="'w-56 min-h-[382px] m-2 relative overflow-hidden shadow-md ' + getBorderClass()">
+    <ng-template pTemplate="header">
+      <div class="pt-4 relative">
+        <!-- Favorite button -->
+        <button pButton
+          class="absolute top-2 right-4 text-2xl bg-transparent border-none text-red-500 hover:opacity-80 hover:scale-110 transition-all z-10"
+          [ngClass]="{'p-button-text': true}" (click)="alternarFavorito()">
+          <span>{{ livro().favorito ? '❤️' : '♡' }}</span>
+        </button>
+
+        <!-- Book image -->
+        <div class="flex justify-center mt-8">
+          <img [src]="livro().imagem" [alt]="livro().titulo" class="w-32 h-46 mb-5 object-contain">
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- Book info -->
+    <div class="flex flex-col items-center">
+      <h2 class="font-[var(--font-montserrat)] text-xl font-bold text-center max-w-[90%] mb-2 dark:text-white">
+        {{ livro().titulo }}
+      </h2>
+      <h3 class="font-[var(--font-montserrat)] text-base font-normal text-center autor-text dark:text-gray-200">
+        {{ livro().autoria }}
+      </h3>
+    </div>
+  </p-card>
+  <!-- Add the top border as a separate element for more control -->
+  <div [class]="'absolute top-0 left-0 right-0 h-6 ' + getTopBorderColorClass()"></div>
+</div>

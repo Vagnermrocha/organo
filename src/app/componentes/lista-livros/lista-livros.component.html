@@ -1,0 +1,16 @@
+<div class="container mx-auto px-4 py-8">
+  <p-card styleClass="shadow-none border-none mb-10">
+    <div class="text-center">
+      <h2 class="text-3xl font-normal mb-4 text-[var(--color-primaria)] font-['Prata']">
+        Minhas leituras
+      </h2>
+      <p-divider align="center" styleClass="w-16 mx-auto border-[var(--color-primaria)] border-t-4"></p-divider>
+    </div>
+  </p-card>
+
+  <div class="mt-10">
+    @for(genero of generos; track genero) {
+    <app-genero-literario [genero]="genero"></app-genero-literario>
+    }
+  </div>
+</div>

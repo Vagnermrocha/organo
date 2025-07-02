@@ -1,0 +1,27 @@
+<div [class]="'my-6 ' + getBackgroundClass()">
+  <p-card styleClass="p-0 w-full bg-transparent">
+    <div class="py-12 px-6 md:px-12 lg:px-24">
+      <div class="text-center mb-6">
+        <h3 class="font-['Prata'] text-2xl font-normal mb-2 text-[var(--color-primaria)]">
+          {{ genero().value }}
+        </h3>
+        <div [class]="'w-8 h-1 mx-auto ' + getBorderClass()"></div>
+      </div>
+
+      <div class="w-full flex flex-wrap justify-center">
+        @if (genero().livros.length > 0) {
+        @for (livro of genero().livros; track livro.titulo) {
+        <app-livro [livro]="livro"></app-livro>
+        }
+        } @else {
+        <div class="flex flex-col items-center">
+          <img src="assets/imagens/sem-livros.svg" alt="Sem livros" class="w-[150px] mt-2 opacity-80">
+          <p class="text-center mt-4 text-[#3b3b3b] text-xl dark:text-gray-200">
+            Nenhum livro cadastrado neste gênero
+          </p>
+        </div>
+        }
+      </div>
+    </div>
+  </p-card>
+</div>
