@@ -32,11 +32,11 @@ export class LivroComponent {
   // New helper method to get the actual top border color
   getTopBorderColorClass(): string {
     const genreMap: Record<string, string> = {
-      'romance': 'bg-[var(--romance-border)]',
-      'misterio': 'bg-[var(--misterio-border)]',
-      'fantasia': 'bg-[var(--fantasia-border)]',
-      'ficcao-cientifica': 'bg-[var(--ficcao-cientifica-border)]',
-      'tecnicos': 'bg-[var(--tecnicos-border)]'
+      'romance': 'top-border-romance',
+      'misterio': 'top-border-misterio',
+      'fantasia': 'top-border-fantasia',
+      'ficcao-cientifica': 'top-border-ficcao-cientifica',
+      'tecnicos': 'top-border-tecnicos'
     };
     
     return genreMap[this.livro().genero.id] || 'bg-gray-300';

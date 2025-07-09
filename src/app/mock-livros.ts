@@ -1,7 +1,18 @@
 import { Livro } from "./componentes/livro/livro";
 
 export const livros: Livro[] = [
-      {
+    {
+    titulo: 'Dexter - O assassino esquisito',
+    autoria: 'Jeff Lindsay',
+    genero: {
+      id: 'romance',
+      value: 'Romance',
+      livros: []
+    },
+    favorito: false,
+    imagem: 'https://http2.mlstatic.com/D_NQ_NP_908686-MLB75322700216_032024-O.webp',
+  },
+        {
     titulo: 'The 100',
     autoria: 'Kass Morgan',
     genero: {
@@ -22,17 +33,6 @@ export const livros: Livro[] = [
     },
     favorito: false,
     imagem: 'https://tse1.mm.bing.net/th/id/OIP.fQdK21U-9C7ynGMQ8-UiHgHaLc?pid=Api&P=0&h=180',
-  },
-    {
-    titulo: 'Dexter - O assassino esquisito',
-    autoria: 'Jeff Lindsay',
-    genero: {
-      id: 'romance',
-      value: 'Romance',
-      livros: []
-    },
-    favorito: false,
-    imagem: 'https://http2.mlstatic.com/D_NQ_NP_908686-MLB75322700216_032024-O.webp',
   },
   {
     titulo: 'As ondas',

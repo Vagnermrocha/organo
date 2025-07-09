@@ -81,3 +81,8 @@ html {
   background-color: #222 !important;
   color: #fff !important;
 }
+
+.light-theme :host ::ng-deep .p-card,
+.light-theme :host ::ng-deep .p-card .p-card-body {
+  background-color: #d1d5db !important;
+}

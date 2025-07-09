@@ -8,11 +8,11 @@
         <div [class]="'w-8 h-1 mx-auto ' + getBorderClass()"></div>
       </div>
 
-      <div class="w-full flex flex-wrap justify-center">
+      <div class="w-full flex flex-wrap justify-center gap-4">
         @if (genero().livros.length > 0) {
-        @for (livro of genero().livros; track livro.titulo) {
-        <app-livro [livro]="livro"></app-livro>
-        }
+          @for (livro of genero().livros; track livro.titulo) {
+            <app-livro [livro]="livro"></app-livro>
+          }
         } @else {
         <div class="flex flex-col items-center">
           <img src="assets/imagens/sem-livros.svg" alt="Sem livros" class="w-[150px] mt-2 opacity-80">
