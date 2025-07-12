@@ -30,13 +30,11 @@ Acesse http://localhost:4200 para visualizar a aplicação.
 
 📸 Demonstração
 
-Inclua aqui uma imagem ou GIF da interface do projeto em uso.
-
 💡 Funcionalidades
 
-- Cadastro de colaboradores
-- Organização por time
-- Atualização dinâmica dos dados
+- Cadastro de obras literárias
+- Organização por categorias
+- Atualização dinâmica dos livros
 - Estilização responsiva
 
 🧪 Testes
