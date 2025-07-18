@@ -52,6 +52,3 @@ ng e2e
 
 Contribuições são super bem-vindas! Sinta-se à vontade para enviar sugestões, relatar problemas ou abrir pull requests com melhorias.
 
-📄 Licença
-
-Este projeto está sob a licença MIT.
